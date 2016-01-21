@@ -114,5 +114,25 @@ public class CustomerFacade implements ClientFacade{
 		
 		return coupons;
 	}
+	
+	/**
+	 * Get all coupons which the customer can buy
+	 * @return
+	 */
+	public Collection<Coupon> GetAllAvailableCoupons(){
+		Collection<Coupon> allCoupon=  couponDBDAO.GetAllCoupons();
+		Collection<Coupon> purchasedCoupon = GetAllPurchasedCoupons();
+		Collection<Coupon> avilableCoupon = new ArrayList<Coupon>();
+		
+		
+		for (Iterator iterator = allCoupon.iterator(); iterator.hasNext();) {
+			Coupon coupon = (Coupon) iterator.next();
+			if (!purchasedCoupon.contains(coupon) && coupon.getAmount()>0)
+				avilableCoupon.add(coupon);
+		}
+		
+		return avilableCoupon;
+		
+	}
 
 }

@@ -16,6 +16,7 @@ import main.Facade.CompanyFacade;
 import main.Facade.CustomerFacade;
 import main.api.JsonUtil.JsonLogIn;
 import main.beanes.CouponSystem;
+import main.beanes.DailyCouponExpirationTask;
 import main.enums.ClientType;
 
 @Path("/login")
@@ -48,6 +49,7 @@ public class LogIN {
 				session.setAttribute("facade", (CustomerFacade)clientFacade);				
 				break;							
 			}
+			DailyCouponExpirationTask.DeleteExpiredCoupons();
 			System.out.println("session is for debuging: " + session.getId());
 			return jsnLogIN;
 		}

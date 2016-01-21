@@ -18,7 +18,7 @@ public class CouponSystem {
 
 	private CompanyDBDAO companyDBDAO = null;
 	private CustomerDBDAO customerDBDAO = null;
-	private DailyCouponExpirationTask runner = null;
+	//private DailyCouponExpirationTask runner = null;
 
 	public static CouponSystem GetInstance() {
 		if (instance == null)
@@ -36,11 +36,11 @@ public class CouponSystem {
 		
 	}
 
-	private void DelteExpierdCoupons(){
-		runner = new DailyCouponExpirationTask();
-		Thread tRunner = new Thread(runner);
-		tRunner.start();
-	}
+	//private void DelteExpierdCoupons(){
+	//	runner = new DailyCouponExpirationTask();
+	//	Thread tRunner = new Thread(runner);
+	//	tRunner.start();
+	//}
 	
 	
 	public ClientFacade Login(String name, String password,
@@ -72,8 +72,8 @@ public class CouponSystem {
 	
 	public void shutdown()
 	{
-		if (runner != null)
-			runner.StopRunning();
+		//if (runner != null)
+		//	runner.StopRunning();
 		
 		try {
 			ConnectionPool connectionPool= ConnectionPool.getInstance();
