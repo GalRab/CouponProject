@@ -47,7 +47,7 @@ public class CustomerFacadeResource {
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null)
 		{
-			CustomerFacade custFacade = (CustomerFacade)seesion.getAttribute("customerFacade");
+			CustomerFacade custFacade = (CustomerFacade)seesion.getAttribute("facade");
 			
 			if (custFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");
@@ -65,7 +65,7 @@ public class CustomerFacadeResource {
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null)
 		{
-			CustomerFacade custFacade = (CustomerFacade)seesion.getAttribute("customerFacade");
+			CustomerFacade custFacade = (CustomerFacade)seesion.getAttribute("facade");
 			
 			if (custFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");
@@ -83,7 +83,7 @@ public class CustomerFacadeResource {
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null)
 		{
-			CustomerFacade custFacade = (CustomerFacade)seesion.getAttribute("customerFacade");
+			CustomerFacade custFacade = (CustomerFacade)seesion.getAttribute("facade");
 			
 			if (custFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");
@@ -108,7 +108,7 @@ public class CustomerFacadeResource {
 		
 		if (seesion != null)
 		{
-			CustomerFacade custFacade = (CustomerFacade)seesion.getAttribute("customerFacade");
+			CustomerFacade custFacade = (CustomerFacade)seesion.getAttribute("facade");
 			
 			if (custFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");

@@ -35,7 +35,7 @@ public class CompanyFacadeResource {
 
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null) {
-			CompanyFacade compFacade = (CompanyFacade)seesion.getAttribute("companyFacade");
+			CompanyFacade compFacade = (CompanyFacade)seesion.getAttribute("facade");
 			
 			
 			if (compFacade == null)
@@ -54,7 +54,7 @@ public class CompanyFacadeResource {
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null) {
 			
-			CompanyFacade compFacade = (CompanyFacade)seesion.getAttribute("companyFacade");
+			CompanyFacade compFacade = (CompanyFacade)seesion.getAttribute("facade");
 			
 			
 			if (compFacade == null)
@@ -72,7 +72,7 @@ public class CompanyFacadeResource {
 	public Coupon UpdateCoupon(@Context HttpServletRequest request, Coupon coupon) {
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null) {
-			CompanyFacade compFacade = (CompanyFacade)seesion.getAttribute("companyFacade");
+			CompanyFacade compFacade = (CompanyFacade)seesion.getAttribute("facade");
 			
 			if (compFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");
@@ -88,7 +88,7 @@ public class CompanyFacadeResource {
 	public Coupon[] GetAllCompanyCoupons(@Context HttpServletRequest request){
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null) {
-			CompanyFacade compFacade = (CompanyFacade)seesion.getAttribute("companyFacade");
+			CompanyFacade compFacade = (CompanyFacade)seesion.getAttribute("facade");
 			
 			if (compFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");
@@ -105,7 +105,7 @@ public class CompanyFacadeResource {
 		
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null) {
-			CompanyFacade compFacade = (CompanyFacade)seesion.getAttribute("companyFacade");
+			CompanyFacade compFacade = (CompanyFacade)seesion.getAttribute("facade");
 			
 			if (compFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");

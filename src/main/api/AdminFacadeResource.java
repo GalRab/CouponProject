@@ -29,7 +29,7 @@ public class AdminFacadeResource {
 	public Customer RemoveCustomer(@Context HttpServletRequest request, @PathParam("id") long custID) {
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null) {
-			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("adminFacade");
+			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("facade");
 
 			if (adminFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");
@@ -46,7 +46,7 @@ public class AdminFacadeResource {
 	public Customer UpdateCustomer(@Context HttpServletRequest request, Customer cust) {
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null) {
-			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("adminFacade");
+			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("facade");
 
 			if (adminFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");
@@ -62,7 +62,7 @@ public class AdminFacadeResource {
 	public Customer GetCustomerByID(@Context HttpServletRequest request, @PathParam("id") long customerID) {
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null) {
-			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("adminFacade");
+			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("facade");
 
 			if (adminFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");
@@ -77,7 +77,7 @@ public class AdminFacadeResource {
 	public Customer GetCustomerByName(@Context HttpServletRequest request, @PathParam("name") String customerName) {
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null) {
-			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("adminFacade");
+			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("facade");
 
 			if (adminFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");
@@ -92,7 +92,7 @@ public class AdminFacadeResource {
 	public Customer[] GetAllCustomers(@Context HttpServletRequest request) {
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null) {
-			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("adminFacade");
+			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("facade");
 
 			if (adminFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");
@@ -109,7 +109,7 @@ public class AdminFacadeResource {
 
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null) {
-			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("adminFacade");
+			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("facade");
 
 			if (adminFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");
@@ -126,7 +126,7 @@ public class AdminFacadeResource {
 
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null) {
-			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("adminFacade");
+			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("facade");
 
 			if (adminFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");
@@ -143,7 +143,7 @@ public class AdminFacadeResource {
 	public Company RemoveCompany(@Context HttpServletRequest request, @PathParam("id") long compID) {
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null) {
-			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("adminFacade");
+			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("facade");
 
 			if (adminFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");
@@ -161,7 +161,7 @@ public class AdminFacadeResource {
 	public Company UpdateCompany(@Context HttpServletRequest request, Company comp) {
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null) {
-			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("adminFacade");
+			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("facade");
 
 			if (adminFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");
@@ -177,7 +177,7 @@ public class AdminFacadeResource {
 	public Company GetCompanyByID(@Context HttpServletRequest request, @PathParam("id") long companyID) {
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null) {
-			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("adminFacade");
+			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("facade");
 
 			if (adminFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");
@@ -192,7 +192,7 @@ public class AdminFacadeResource {
 	public Company GetCompanyByName(@Context HttpServletRequest request, @PathParam("name") String companyName) {
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null) {
-			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("adminFacade");
+			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("facade");
 
 			if (adminFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");
@@ -207,7 +207,7 @@ public class AdminFacadeResource {
 	public Company[] GetAllCompanies(@Context HttpServletRequest request) {
 		HttpSession seesion = request.getSession(false);
 		if (seesion != null) {
-			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("adminFacade");
+			AdminFacade adminFacade = (AdminFacade) seesion.getAttribute("facade");
 
 			if (adminFacade == null)
 				throw new CouponSystemException("You are not authorized to perform that operation");

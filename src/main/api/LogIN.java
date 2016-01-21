@@ -39,13 +39,13 @@ public class LogIN {
 			HttpSession session = request.getSession(true);
 			switch (clientType) {
 			case AdminFacade:
-				session.setAttribute("adminFacade", (AdminFacade)clientFacade);
+				session.setAttribute("facade", (AdminFacade)clientFacade);
 				break;
 			case CompanyFacade:		
-				session.setAttribute("companyFacade", (CompanyFacade)clientFacade);
+				session.setAttribute("facade", (CompanyFacade)clientFacade);
 				break;
 			case CustomerFacade:
-				session.setAttribute("customerFacade", (CustomerFacade)clientFacade);				
+				session.setAttribute("facade", (CustomerFacade)clientFacade);				
 				break;							
 			}
 			System.out.println("session is for debuging: " + session.getId());
