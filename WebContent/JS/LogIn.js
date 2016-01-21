@@ -4,11 +4,25 @@
 
 var app = angular.module('appLogIn', []);
 	app.controller('ctlLogIn', function($scope, $http) {
-		$scope.restURL = "";		
-		$scope.LogIN = function(){
-			url = $scope.restURL;
-						
-			$http.post(url, {"userName" : $scope.userName, "password" : $scope.password, "clientType" : $scope.clientType })
+		
+		
+		$scope.restURL = "";
+		
+		$scope.LogINAdmin = function(userType){
+			$scope.LogIN("AdminFacade");
+		}
+		
+		$scope.LogINCompany = function(userType){
+			$scope.LogIN("CompanyFacade");
+		}
+		
+		$scope.LogINCustomer = function(userType){
+			$scope.LogIN("CustomerFacade");
+		}
+		
+		$scope.LogIN = function(userType){
+			url = $scope.restURL;					
+			$http.post(url, {"userName" : $scope.userName, "password" : $scope.password, "clientType" : userType })
 			.then(function(response) {
 				$scope.errorDetails ="";				
 			}, $scope.handleError);
